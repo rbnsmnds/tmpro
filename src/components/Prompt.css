@@ -1,0 +1,32 @@
+/* layout de toda a página */
+.container-body {
+  width: 100%; /* para ocupar 100% da página */
+  margin: 0 auto; /* para centralizar tudo na página */
+}
+
+.container-wrapper {
+  width: 100%; /* para ocupar 100% do modal */
+  min-height: 100vh;  /* para manter o modal com tamanho mínimo na página */
+  display: flex; /* para dispor os itens em multilinha */
+  flex-wrap: wrap; /* para estreitar o modal até o limite dos itens */
+  align-items: center; /* para centralizar os itens no modal */
+  justify-content: center; /* para justificar os itens mantidos no centro */
+  padding: 15px;
+  /* background-color: transparent; */
+  /* background-image: url(https://source.unsplash.com/xzJ92bNCXHA/1600x900); */
+  /* background-size: cover; */
+
+  background: -webkit-linear-gradient(to top right, #00C9FF 0%, #92FE9D 100%);
+  background: -o-linear-gradient(to top right, #00C9FF 0%, #92FE9D 100%);
+  background: -moz-linear-gradient(to top right, #00C9FF 0%, #92FE9D 100%);
+  background: linear-gradient(to top right, #00C9FF 0%, #92FE9D 100%);
+}
+
+.container-prompt {
+  width: 390px;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 22px 55px 22px 55px;
+  box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.2);
+}

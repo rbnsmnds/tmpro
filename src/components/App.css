@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+/* resetando as configurações do CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 'Poppins', 
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* paleta primária de cores */
+.color01 { color: #574951 };
+.color02 { color: #3a111c };
+.color03 { color: #25271e };
+.color04 { color: #484848 };
+.color05 { color: #83988e };
+.color06 { color: #bcdea5 };
+.color07 { color: #e6f9bc };
+.color08 { color: #beee3b };
+.color09 { color: #00ff50 };
+.color10 { color: #00c9d2 };
+.color11 { color: #0f928c };
+.color12 { color: #006465 };
+
+/* paleta secundária de cores */
+.color13 { color: #f4fbff };
+.color14 { color: #73c2bf };
+.color15 { color: #549b93 };
+.color16 { color: #4ea7ad };
+.color17 { color: #377779 };
+.color18 { color: #2d1b11 };
+.color19 { color: #313125 };
+.color20 { color: #3b382f };
+.color21 { color: #4b4642 };
+.color22 { color: #91734f };
+.color23 { color: #f1b658 };
+.color24 { color: #f0cb9f };
+
+.form-container {
+  width: 100%;
+}
+
+.form-title {
+  display: block;
+  font-size: 30px;
+  color: #574951; /* cor do texto de boas-vindas */
+  line-height: 1.2;
+  text-align: center;
+}
+
+.form-title img {
+  width: 150px;
+}
+
+.welcome {  
+  padding-bottom: 33px;
+}
+
+.form-input {
+  width: 100%;
+  position: relative;
+  border-bottom: 2px solid #bcdea5; /* cor do sublinhado do campo */
+  margin-bottom: 37px;
+}
+
+.input {
+  font-size: 15px;
+  color: #484848; /* cor do texto do campo */
+  line-height: 1.2;
+  border: none;
+  display: block;
+  width: 100%;
+  height: 45px;  
+  background-color: transparent;
+  padding: 0 5px;
+}
+
+.input-focus {
+  position: absolute; /* para manter o placeholder acima do input */
+  display: block;
+  width: 100%;  
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  color: #83988e;  
+}
+
+.input-focus::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+
+  background: -webkit-linear-gradient(to top right, #006465 15%, #00ff50);
+  background: -o-linear-gradient(to top right, #006465 15%, #00ff50);
+  background: -moz-linear-gradient(to top right, #006465 15%, #00ff50);
+  background: linear-gradient(to top right, #006465 15%, #00ff50);
+}
+
+.input-focus::after {
+  font-size: 15px;
+  color: #83988e;
+  line-height: 1.2;
+  display: block;
+  width: 100%;
+  position: absolute;
+  top: 16px;
+  left: 0px;
+  padding-left: 5px;
+
+  content: attr(data-placeholder);
+  
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.input:focus {
+  outline: 0;
+}
+
+.input:focus + .input-focus::after {
+  top: -15px;
+}
+
+.input:focus + .input-focus::before {
+  width: 100%;
+}
+
+.has-value + .input-focus::after {
+  top: -15px;
+}
+
+.has-value + .input-focus::before {
+  width: 100%;
+}
+
+.form-button {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+
+.button {
+  font-size: 15px;
+  font-weight: bolder;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  line-height: 1.2;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+
+  background: -webkit-linear-gradient(to top right, #006465 15%, #00ff50);
+  background: -o-linear-gradient(to top right, #006465 15%, #00ff50);
+  background: -moz-linear-gradient(to top right, #006465 15%, #00ff50);
+  background: linear-gradient(to top right, #006465 15%, #00ff50);  
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.form-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 33px;
+}
+
+.form-text {
+  font-size: 14px;
+  color: #574951; /* cor do texto do rodapé */
+  line-height: 1.5;
+  padding-right: 5px;
+  text-decoration: none;
+}
+
+.form-link {
+  font-size: 14px;
+  font-weight: bolder;
+  color: #006465;
+  line-height: 1.5;
+  text-decoration: none;
+}
